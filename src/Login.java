@@ -14,6 +14,8 @@ import javax.swing.SpringLayout;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+
 import javax.swing.JButton;
 
 public class Login extends JFrame {
@@ -59,7 +61,7 @@ public class Login extends JFrame {
 		contentPane.add(lblEmail);
 		
 		textField = new JTextField();
-		textField.setHorizontalAlignment(SwingConstants.RIGHT);
+		textField.setHorizontalAlignment(SwingConstants.LEFT);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
@@ -74,7 +76,15 @@ public class Login extends JFrame {
 		contentPane.add(lblForgetPassword);
 		
 		JButton btnNewButton = new JButton("Login");
+		btnNewButton.addActionListener(event -> btnLoginClick(event));
 		contentPane.add(btnNewButton);
 	}
+	
+	public void btnLoginClick(ActionEvent event) {
+		AdminDashboard frame = new AdminDashboard(this);
+		frame.setVisible(true);
+		this.setVisible(false);
+	}
 
+	
 }
