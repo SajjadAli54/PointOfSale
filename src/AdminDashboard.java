@@ -24,14 +24,15 @@ public class AdminDashboard extends JFrame {
 		
 		setTitle("Admin Dashboard");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1247, 652);
+		setSize(1200, 800);
+		
 		
 		contentPane = new JPanel();
 		contentPane.setBackground(UIManager.getColor("Button.darkShadow"));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
-		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		setContentPane(contentPane);
 		
 		JButton btnAdd = new JButton("Add User");
 		btnAdd.setFont(new Font("Verdana", Font.BOLD, 16));
