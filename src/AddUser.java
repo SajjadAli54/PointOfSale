@@ -15,13 +15,11 @@ public class AddUser extends JPanel {
 	private JTextField txtEmail;
 	private JTextField txtDesignation;
 
-	/**
-	 * Create the frame.
-	 */
+	
 	public AddUser() {
 		
 		setLayout(null);
-		setSize(700, 500);
+//		setSize(300, 300);
 		
 		JLabel lblName = new JLabel("Name");
 		lblName.setFont(new Font("Verdana", Font.PLAIN, 14));
@@ -61,5 +59,6 @@ public class AddUser extends JPanel {
 		btnAdd.setBounds(10, 260, 229, 50);
 		btnAdd.setIcon(new ImageIcon(AdminDashboard.class.getResource("/my/icons8-add-user-55.png")));
 		add(btnAdd);
+		
 	}
 }

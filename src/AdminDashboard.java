@@ -24,7 +24,7 @@ public class AdminDashboard extends JFrame {
 		
 		setTitle("Admin Dashboard");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(1200, 800);
+		setSize(1400, 800);
 		
 		
 		contentPane = new JPanel();
@@ -72,9 +72,7 @@ public class AdminDashboard extends JFrame {
 
 	public void btnAddClick(ActionEvent event) {
 		AddUser panel = new AddUser();
-		panel.setBackground(UIManager.getColor("Button.darkShadow"));
-		panel.setBounds(25, 100, 700, 500);
-		contentPane.add(panel);
+		addPanel(panel);
 	}
 	
 	public void btnDeleteClick(ActionEvent event) {
@@ -95,6 +93,11 @@ public class AdminDashboard extends JFrame {
 	}
 	
 	private void addPanel(JPanel panel) {
+		panel.setBackground(UIManager.getColor("Button.darkShadow"));
+		panel.setBounds(25, 100, 400, 400);
+		contentPane.add(panel);
 		
+		this.pack();
+		setSize(1400, 800);
 	}
 }
