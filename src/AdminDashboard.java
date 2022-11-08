@@ -86,7 +86,7 @@ public class AdminDashboard extends JFrame {
 		btnSearch.setBounds(429, 11, 186, 90);
 		panel.add(btnSearch);
 		
-		String[] cols = new String[] {" ", "#", "item info", "Price", "Quantity"};
+		String[] cols = new String[] {"S.No", "id", "item info", "Price", "Quantity"};
 		table = new JTable(new DefaultTableModel(cols, 0));
 		table.setFont(new Font("Verdana", Font.PLAIN, 14));
 //		table.getColumnModel().getColumn(0).setPreferredWidth(5);
@@ -106,57 +106,6 @@ public class AdminDashboard extends JFrame {
 		
 		contentPane.add(panel);
 		setContentPane(contentPane);
-		
-		JPanel panelPayDetails = new JPanel();
-		panelPayDetails.setBackground(Color.BLACK);
-		panelPayDetails.setBounds(642, 11, 614, 114);
-		contentPane.add(panelPayDetails);
-		panelPayDetails.setLayout(null);
-		
-		JLabel lblNewLabel = new JLabel("Sub Total");
-		lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 14));
-		lblNewLabel.setForeground(Color.GREEN);
-		lblNewLabel.setBounds(10, 11, 118, 27);
-		panelPayDetails.add(lblNewLabel);
-		
-		JLabel lblSubTotal = new JLabel("$ 0.00");
-		lblSubTotal.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblSubTotal.setForeground(Color.GREEN);
-		lblSubTotal.setFont(new Font("Verdana", Font.BOLD, 14));
-		lblSubTotal.setBounds(454, 11, 118, 27);
-		panelPayDetails.add(lblSubTotal);
-		
-		JLabel lblTax = new JLabel("$ 0.00");
-		lblTax.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblTax.setForeground(Color.GREEN);
-		lblTax.setFont(new Font("Verdana", Font.BOLD, 14));
-		lblTax.setBounds(454, 49, 118, 27);
-		panelPayDetails.add(lblTax);
-		
-		JLabel label = new JLabel("Tax");
-		label.setForeground(Color.GREEN);
-		label.setFont(new Font("Verdana", Font.BOLD, 14));
-		label.setBounds(10, 49, 118, 27);
-		panelPayDetails.add(label);
-		
-		JLabel lblTotal = new JLabel("$ 0.00");
-		lblTotal.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblTotal.setForeground(Color.GREEN);
-		lblTotal.setFont(new Font("Verdana", Font.BOLD, 16));
-		lblTotal.setBounds(454, 76, 118, 27);
-		panelPayDetails.add(lblTotal);
-		
-		JLabel label2 = new JLabel("Total");
-		label2.setForeground(Color.GREEN);
-		label2.setFont(new Font("Verdana", Font.BOLD, 16));
-		label2.setBounds(10, 76, 118, 27);
-		panelPayDetails.add(label2);
-		
-		JButton btnPay = new JButton("Pay");
-		btnPay.setBackground(new Color(50, 205, 50));
-		btnPay.setFont(new Font("Verdana", Font.BOLD, 16));
-		btnPay.setBounds(642, 138, 614, 56);
-		contentPane.add(btnPay);
 		
 		JButton btnInvoice = new JButton("Invoice");
 		btnInvoice.setForeground(new Color(255, 255, 255));
@@ -225,48 +174,23 @@ public class AdminDashboard extends JFrame {
 		btnAccounts.setBounds(1086, 298, 170, 76);
 		contentPane.add(btnAccounts);
 		
-		JButton btnDelete = new JButton("Delete");
-		btnDelete.setIcon(new ImageIcon(AdminDashboard.class.getResource("/my/remove.png")));
-		btnDelete.setHorizontalTextPosition(SwingConstants.RIGHT);
-		btnDelete.setForeground(Color.WHITE);
-		btnDelete.setFont(new Font("Verdana", Font.BOLD, 16));
-		btnDelete.setBackground(new Color(30, 144, 255));
-		btnDelete.setBounds(10, 515, 120, 76);
-		contentPane.add(btnDelete);
-		
 		JButton btnDiscount = new JButton("Discount");
-		btnDiscount.setHorizontalAlignment(SwingConstants.LEADING);
 		btnDiscount.setIcon(new ImageIcon(AdminDashboard.class.getResource("/my/price-tag.png")));
 		btnDiscount.setHorizontalTextPosition(SwingConstants.RIGHT);
+		btnDiscount.setHorizontalAlignment(SwingConstants.LEADING);
 		btnDiscount.setForeground(Color.WHITE);
 		btnDiscount.setFont(new Font("Verdana", Font.BOLD, 16));
 		btnDiscount.setBackground(new Color(30, 144, 255));
-		btnDiscount.setBounds(129, 515, 117, 76);
+		btnDiscount.setBounds(806, 11, 160, 48);
 		contentPane.add(btnDiscount);
 		
-		JButton btnDiscount_1 = new JButton("+");
-		btnDiscount_1.setHorizontalTextPosition(SwingConstants.CENTER);
-		btnDiscount_1.setForeground(Color.WHITE);
-		btnDiscount_1.setFont(new Font("Verdana", Font.BOLD, 16));
-		btnDiscount_1.setBackground(new Color(30, 144, 255));
-		btnDiscount_1.setBounds(284, 514, 48, 76);
-		contentPane.add(btnDiscount_1);
-		
-		JButton btnDiscount_1_1 = new JButton("-");
-		btnDiscount_1_1.setHorizontalTextPosition(SwingConstants.CENTER);
-		btnDiscount_1_1.setForeground(Color.WHITE);
-		btnDiscount_1_1.setFont(new Font("Verdana", Font.BOLD, 16));
-		btnDiscount_1_1.setBackground(new Color(30, 144, 255));
-		btnDiscount_1_1.setBounds(332, 514, 43, 76);
-		contentPane.add(btnDiscount_1_1);
-		
 		JButton btnQuanCahnge = new JButton("QUAN CHANGE");
-		btnQuanCahnge.setAutoscrolls(true);
 		btnQuanCahnge.setHorizontalTextPosition(SwingConstants.CENTER);
 		btnQuanCahnge.setForeground(Color.WHITE);
 		btnQuanCahnge.setFont(new Font("Verdana", Font.BOLD, 16));
 		btnQuanCahnge.setBackground(new Color(30, 144, 255));
-		btnQuanCahnge.setBounds(398, 515, 120, 76);
+		btnQuanCahnge.setAutoscrolls(true);
+		btnQuanCahnge.setBounds(642, 68, 324, 64);
 		contentPane.add(btnQuanCahnge);
 		
 		JButton btnPriceChange = new JButton("PRICE CHANGE");
@@ -274,8 +198,81 @@ public class AdminDashboard extends JFrame {
 		btnPriceChange.setForeground(Color.WHITE);
 		btnPriceChange.setFont(new Font("Verdana", Font.BOLD, 16));
 		btnPriceChange.setBackground(new Color(30, 144, 255));
-		btnPriceChange.setBounds(517, 515, 120, 76);
+		btnPriceChange.setBounds(975, 68, 281, 64);
 		contentPane.add(btnPriceChange);
+		
+		JPanel panelPayDetails = new JPanel();
+		panelPayDetails.setLayout(null);
+		panelPayDetails.setBackground(new Color(25, 25, 112));
+		panelPayDetails.setBounds(10, 523, 622, 114);
+		contentPane.add(panelPayDetails);
+		
+		JLabel lblNewLabel = new JLabel("Sub Total");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 14));
+		lblNewLabel.setBounds(10, 11, 118, 27);
+		panelPayDetails.add(lblNewLabel);
+		
+		JLabel lblSubTotal = new JLabel("$ 0.00");
+		lblSubTotal.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblSubTotal.setForeground(new Color(255, 255, 255));
+		lblSubTotal.setFont(new Font("Verdana", Font.BOLD, 14));
+		lblSubTotal.setBounds(454, 11, 118, 27);
+		panelPayDetails.add(lblSubTotal);
+		
+		JLabel lblTax = new JLabel("$ 0.00");
+		lblTax.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblTax.setForeground(new Color(255, 255, 255));
+		lblTax.setFont(new Font("Verdana", Font.BOLD, 14));
+		lblTax.setBounds(454, 49, 118, 27);
+		panelPayDetails.add(lblTax);
+		
+		JLabel label = new JLabel("Tax");
+		label.setForeground(new Color(255, 255, 255));
+		label.setFont(new Font("Verdana", Font.BOLD, 14));
+		label.setBounds(10, 49, 118, 27);
+		panelPayDetails.add(label);
+		
+		JLabel lblTotal = new JLabel("$ 0.00");
+		lblTotal.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblTotal.setForeground(new Color(255, 255, 255));
+		lblTotal.setFont(new Font("Verdana", Font.BOLD, 16));
+		lblTotal.setBounds(454, 76, 118, 27);
+		panelPayDetails.add(lblTotal);
+		
+		JLabel label2 = new JLabel("Total");
+		label2.setForeground(new Color(255, 255, 255));
+		label2.setFont(new Font("Verdana", Font.BOLD, 16));
+		label2.setBounds(10, 76, 118, 27);
+		panelPayDetails.add(label2);
+		
+		JButton btnSubtract = new JButton("-");
+		btnSubtract.setIcon(new ImageIcon(AdminDashboard.class.getResource("/my/icons8-subtract-32.png")));
+		btnSubtract.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnSubtract.setForeground(Color.WHITE);
+		btnSubtract.setFont(new Font("Verdana", Font.BOLD, 16));
+		btnSubtract.setBackground(new Color(30, 144, 255));
+		btnSubtract.setBounds(1126, 11, 130, 48);
+		contentPane.add(btnSubtract);
+		
+		JButton btnDelete = new JButton("Delete");
+		btnDelete.setIcon(new ImageIcon(AdminDashboard.class.getResource("/my/remove.png")));
+		btnDelete.setHorizontalTextPosition(SwingConstants.RIGHT);
+		btnDelete.setHorizontalAlignment(SwingConstants.LEADING);
+		btnDelete.setForeground(Color.WHITE);
+		btnDelete.setFont(new Font("Verdana", Font.BOLD, 16));
+		btnDelete.setBackground(new Color(30, 144, 255));
+		btnDelete.setBounds(642, 11, 154, 48);
+		contentPane.add(btnDelete);
+		
+		JButton btnAdd = new JButton("");
+		btnAdd.setIcon(new ImageIcon(AdminDashboard.class.getResource("/my/addition.png")));
+		btnAdd.setHorizontalTextPosition(SwingConstants.CENTER);
+		btnAdd.setForeground(Color.WHITE);
+		btnAdd.setFont(new Font("Verdana", Font.BOLD, 16));
+		btnAdd.setBackground(new Color(30, 144, 255));
+		btnAdd.setBounds(976, 11, 140, 48);
+		contentPane.add(btnAdd);
 	}
 
 	public void btnAddClick(ActionEvent event) {
